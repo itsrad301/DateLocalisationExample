@@ -15,26 +15,26 @@ namespace DateExample.DataModel
         public int ID { get; set; }
         // [DataType(DataType.Date)] // Used for HTML 5 Browser enabled Date Control but does not 
         [Column(TypeName = "date")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yy}", ApplyFormatInEditMode = true)]
         public DateTime? StartDate { get; set; }
         //[DataType(DataType.Date)]
         [Column(TypeName = "date")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MMM-yy}", ApplyFormatInEditMode = true)]
         public DateTime? EndDate{ get; set; }
     }
 
-    public class DateContext : DbContext
+    public class Week11Context : DbContext
     {
         public DbSet<LocalDate> Dates { get; set; }
 
-        public DateContext() : base(nameOrConnectionString: "DateExampleConnection")
+        public Week11Context() : base(nameOrConnectionString: "DateExampleConnection")
         {
 
         }
 
-        public static DateContext Create()
+        public static Week11Context Create()
         {
-            return new DateContext();
+            return new Week11Context();
         }
     }
 }
