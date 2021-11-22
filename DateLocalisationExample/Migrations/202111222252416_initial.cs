@@ -12,8 +12,8 @@ namespace DateLocalisationExample.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
-                        StartDate = c.DateTime(storeType: "date"),
-                        EndDate = c.DateTime(storeType: "date"),
+                        StartDate = c.DateTime(nullable: false, storeType: "date"),
+                        EndDate = c.DateTime(nullable: false, storeType: "date"),
                     })
                 .PrimaryKey(t => t.ID);
             

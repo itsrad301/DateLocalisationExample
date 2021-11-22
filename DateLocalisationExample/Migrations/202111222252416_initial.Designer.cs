@@ -13,7 +13,7 @@ namespace DateLocalisationExample.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201811122239197_initial"; }
+            get { return "202111222252416_initial"; }
         }
         
         string IMigrationMetadata.Source
